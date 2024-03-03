@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="055e0a9a-4713-4bd7-826a-7360570422be" name="Changes" comment="" />
+    <list default="true" id="055e0a9a-4713-4bd7-826a-7360570422be" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FirstTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +23,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -24,31 +38,104 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2d7pw9uimThKLgLsVXoqOXihB56" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.FirstTest.FirstTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.FirstTest.executor&quot;: &quot;Run&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/osukhorukova/Documents/TeachMeSkills/AQA&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.BaseTest.archTest.executor": "Run",
+    "TestNG.CalcTest.TestSum.executor": "Run",
+    "TestNG.CalcTest.dataForDivNegNullTest.executor": "Run",
+    "TestNG.CalcTest.divDoubleByIntPosTest.executor": "Run",
+    "TestNG.CalcTest.divDoubleNegTest.executor": "Run",
+    "TestNG.CalcTest.divDoublePosTest.executor": "Run",
+    "TestNG.CalcTest.divIntByDoublePosTest.executor": "Run",
+    "TestNG.CalcTest.divIntNegDoubleTest.executor": "Run",
+    "TestNG.CalcTest.divIntNegTest.executor": "Run",
+    "TestNG.CalcTest.divIntNegTestInt.executor": "Run",
+    "TestNG.CalcTest.divIntPosTest.executor": "Run",
+    "TestNG.CalcTest.divIntPosTestInt.executor": "Run",
+    "TestNG.CalcTest.divIntTest.executor": "Run",
+    "TestNG.CalcTest.divTest.executor": "Debug",
+    "TestNG.CalcTest.sumTest.executor": "Run",
+    "TestNG.FirstTest.FirstTest.executor": "Run",
+    "TestNG.FirstTest.executor": "Run",
+    "TestNG.TmpTest.archTest.executor": "Run",
+    "git-widget-placeholder": "TestNG__HW",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/osukhorukova/Documents/TeachMeSkills/AQA",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="FirstTest.FirstTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.CalcTest.divDoubleByIntPosTest">
+    <configuration name="CalcTest.divDoubleByIntPosTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQA" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="FirstTest" />
+      <option name="MAIN_CLASS_NAME" value="CalcTest" />
+      <option name="METHOD_NAME" value="divDoubleByIntPosTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalcTest.divDoubleNegTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalcTest" />
+      <option name="METHOD_NAME" value="divDoubleNegTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalcTest.divDoublePosTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalcTest" />
+      <option name="METHOD_NAME" value="divDoublePosTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalcTest.divIntByDoublePosTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalcTest" />
+      <option name="METHOD_NAME" value="divIntByDoublePosTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalcTest.divIntNegTestInt" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalcTest" />
+      <option name="METHOD_NAME" value="divIntNegTestInt" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -58,13 +145,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FirstTest.FirstTest" />
+        <item itemvalue="TestNG.CalcTest.divDoubleByIntPosTest" />
+        <item itemvalue="TestNG.CalcTest.divIntByDoublePosTest" />
+        <item itemvalue="TestNG.CalcTest.divDoubleNegTest" />
+        <item itemvalue="TestNG.CalcTest.divDoublePosTest" />
+        <item itemvalue="TestNG.CalcTest.divIntNegTestInt" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
         <option value="jdk-17.0.9-corretto-17.0.9-8336523bb0d9-301ddabe" />
       </set>
     </attachedChunks>
