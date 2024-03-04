@@ -4,12 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="055e0a9a-4713-4bd7-826a-7360570422be" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FirstTest.java" beforeDir="false" />
+    <list default="true" id="055e0a9a-4713-4bd7-826a-7360570422be" name="Changes" comment="Init">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AQA.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/configuration/ReadProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/BrowserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ElectricWarmFloorCalcTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Listener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Listener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CalcTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/data/StaticProvider.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="TestNG_HW" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,6 +58,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.BaseTest.archTest.executor": "Run",
     "TestNG.CalcTest.TestSum.executor": "Run",
     "TestNG.CalcTest.dataForDivNegNullTest.executor": "Run",
@@ -62,12 +74,18 @@
     "TestNG.CalcTest.divIntTest.executor": "Run",
     "TestNG.CalcTest.divTest.executor": "Debug",
     "TestNG.CalcTest.sumTest.executor": "Run",
+    "TestNG.ElectricWarmFloorCalcTest.browserServiceTest.executor": "Run",
+    "TestNG.ElectricWarmFloorCalcTest.executor": "Run",
     "TestNG.FirstTest.FirstTest.executor": "Run",
+    "TestNG.FirstTest.browserServiceTest (1).executor": "Debug",
+    "TestNG.FirstTest.browserServiceTest.executor": "Run",
     "TestNG.FirstTest.executor": "Run",
+    "TestNG.LaminateCalcTest.browserServiceTest.executor": "Run",
+    "TestNG.LaminateCalcTest.executor": "Run",
     "TestNG.TmpTest.archTest.executor": "Run",
-    "git-widget-placeholder": "TestNG__HW",
+    "git-widget-placeholder": "Selenium__HW",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/osukhorukova/Documents/TeachMeSkills/AQA",
+    "last_opened_file_path": "/Users/osukhorukova/Documents/AQA/src/main/java",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -75,6 +93,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/test/recources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -82,31 +104,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CalcTest.divDoubleByIntPosTest">
-    <configuration name="CalcTest.divDoubleByIntPosTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQA" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CalcTest" />
-      <option name="METHOD_NAME" value="divDoubleByIntPosTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalcTest.divDoubleNegTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AQA" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CalcTest" />
-      <option name="METHOD_NAME" value="divDoubleNegTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.LaminateCalcTest.browserServiceTest">
     <configuration name="CalcTest.divDoublePosTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AQA" />
       <option name="PACKAGE_NAME" value="" />
@@ -143,13 +141,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ElectricWarmFloorCalcTest.browserServiceTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ElectricWarmFloorCalcTest" />
+      <option name="METHOD_NAME" value="browserServiceTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LaminateCalcTest.browserServiceTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AQA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LaminateCalcTest" />
+      <option name="METHOD_NAME" value="browserServiceTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CalcTest.divDoubleByIntPosTest" />
-        <item itemvalue="TestNG.CalcTest.divIntByDoublePosTest" />
-        <item itemvalue="TestNG.CalcTest.divDoubleNegTest" />
-        <item itemvalue="TestNG.CalcTest.divDoublePosTest" />
+        <item itemvalue="TestNG.LaminateCalcTest.browserServiceTest" />
+        <item itemvalue="TestNG.ElectricWarmFloorCalcTest.browserServiceTest" />
         <item itemvalue="TestNG.CalcTest.divIntNegTestInt" />
+        <item itemvalue="TestNG.CalcTest.divIntByDoublePosTest" />
+        <item itemvalue="TestNG.CalcTest.divDoublePosTest" />
       </list>
     </recent_temporary>
   </component>
@@ -170,6 +192,36 @@
       <option name="presentableId" value="Default" />
       <updated>1709369209722</updated>
     </task>
+    <task id="LOCAL-00001" summary="TestNG Homework">
+      <option name="closed" value="true" />
+      <created>1709451430662</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709451430662</updated>
+    </task>
+    <task id="LOCAL-00002" summary="TestNG Homework">
+      <option name="closed" value="true" />
+      <created>1709451456610</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709451456610</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Init">
+      <option name="closed" value="true" />
+      <created>1709461455961</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709461455961</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="TestNG Homework" />
+    <MESSAGE value="Init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init" />
   </component>
 </project>

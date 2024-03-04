@@ -3,6 +3,11 @@ import org.testng.ITestResult;
 
 public class Listener implements ITestListener {
     public void onTestFailure(ITestResult result) {
-        System.out.println("Taking a screenshot...");
+        System.out.println("Taking a screenshot of failure...");
     }
+
+    public void onTestSuccess (ITestResult result) {
+        System.out.println("Taking a screenshot of success...");
+    }
+
 }
