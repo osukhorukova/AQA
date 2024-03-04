@@ -6,6 +6,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+import java.lang.ref.SoftReference;
 
 public class ElectricWarmFloorCalcTest extends BaseTest {
     BrowserService browserService = new BrowserService();
@@ -43,8 +46,12 @@ public class ElectricWarmFloorCalcTest extends BaseTest {
         WebElement floorCablePower = driver.findElement(By.id("floor_cable_power"));
         WebElement specFloorCablePower = driver.findElement(By.id("spec_floor_cable_power"));
 
-        Assert.assertEquals(floorCablePower.getAttribute("value"), "23086", "Something went wrong...");
-        Assert.assertEquals(specFloorCablePower.getAttribute("value"), "770", "Something went wrong...");
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(floorCablePower.getAttribute("value"), "23086", "Something went wrong...");
+        softAssert.assertEquals(specFloorCablePower.getAttribute("value"), "770", "Something went wrong...");
+
+        softAssert.assertAll();
+
     }
 
     @AfterMethod
