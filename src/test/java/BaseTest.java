@@ -9,5 +9,10 @@ public class BaseTest {
         calculator = new Calculator();
         System.out.println("Initiating the calculator");
     }
+
+    @BeforeGroups (groups = {"positive", "negative"})
+    public void methodBeforeGeneral() {
+        calculator = new Calculator();
+    }
 }
 
