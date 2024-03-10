@@ -26,7 +26,7 @@ public class BrowserService {
                 break;
         }
     }
-    public WebDriver gerDriver(){
+    public WebDriver getDriver(){
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         return driver;
     }
@@ -40,4 +40,6 @@ public class BrowserService {
         //chromeOptions.addArguments("--headless");
         return chromeOptions;
     }
+
+
 }
