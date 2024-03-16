@@ -9,15 +9,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-
-public class CssLocatorsTest {
+public class XpathLocatorsTest {
     private WebDriver driver;
 
     @BeforeTest
     public void setup() throws InterruptedException {
         driver = new BrowserService().getDriver();
         driver.get(ReadProperties.getUrl());
-        //by css #id - Username input
+        //by xpath - Username input
         driver.findElement(By.cssSelector("#user-name")).sendKeys(ReadProperties.username());
         //by css #id - Password input
         driver.findElement(By.cssSelector("#password")).sendKeys(ReadProperties.password());
