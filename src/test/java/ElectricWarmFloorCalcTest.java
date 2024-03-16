@@ -24,24 +24,15 @@ public class ElectricWarmFloorCalcTest extends BaseTest {
         WebElement heatingType = driver.findElement(By.id("heating_type"));
 
         floorWidth.sendKeys("5");
-        Thread.sleep(2000);
         floorLength.sendKeys("6");
-        Thread.sleep(2000);
         Select selectRoom = new Select(roomType);
-        Thread.sleep(2000);
         selectRoom.selectByValue("2");
-        Thread.sleep(2000);
         Select selectHeatingType = new Select(heatingType);
-        Thread.sleep(2000);
         selectHeatingType.selectByValue("3");
-        Thread.sleep(2000);
         floorLosses.sendKeys("41484");
-        Thread.sleep(2000);
 
         WebElement button = driver.findElement(By.name("button"));
         button.click();
-
-        Thread.sleep(2000);
 
         WebElement floorCablePower = driver.findElement(By.id("floor_cable_power"));
         WebElement specFloorCablePower = driver.findElement(By.id("spec_floor_cable_power"));
@@ -49,9 +40,7 @@ public class ElectricWarmFloorCalcTest extends BaseTest {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(floorCablePower.getAttribute("value"), "23086", "Something went wrong...");
         softAssert.assertEquals(specFloorCablePower.getAttribute("value"), "770", "Something went wrong...");
-
         softAssert.assertAll();
-
     }
 
     @AfterMethod
