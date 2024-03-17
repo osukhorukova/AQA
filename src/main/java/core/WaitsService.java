@@ -32,12 +32,24 @@ public class WaitsService {
         return wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
+    public WebElement waitForElementClickable(By by) {
+        return wait.until(ExpectedConditions.elementToBeClickable(by));
+    }
+
+    public Boolean waitForElementInvisible(WebElement webElement) {
+        return wait.until(ExpectedConditions.invisibilityOf(webElement));
+    }
+    public WebElement waitForElementVisible(WebElement webElement) {
+        return wait.until(ExpectedConditions.visibilityOf(webElement));
+    }
+
+
     // это по сути цикл do until
     public WebElement waitForVisibilityLocatedBy(By by) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
-    public List<WebElement> waitForAllVisibleElementsLocatedBy(By locator){
+    public List<WebElement> waitForAllVisibleElementsLocatedBy(By locator) {
         return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
     }
 }
