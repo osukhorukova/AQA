@@ -12,6 +12,7 @@ public class DynamicControlsTest extends BaseTest {
         WebElement button = waitsService.waitForElementClickable(By.cssSelector("#checkbox-example > button"));
         button.click();
         WebElement goneText = waitsService.waitForVisibilityLocatedBy(By.xpath("//*[@id='message']"));
+        Assert.assertEquals(waitsService.waitForElementVisible(goneText), goneText);
         Assert.assertTrue(waitsService.waitForElementInvisible(checkBox));
 
     }
