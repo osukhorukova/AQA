@@ -31,7 +31,11 @@ public class ReadProperties {
         return properties.getProperty("password");
     }
 
+    public static int timeout() {
+        return Integer.parseInt(properties.getProperty("timeout"));
+    }
     public static boolean isHeadless() {
         return properties.getProperty("headless").equalsIgnoreCase("true");
+
     }
 }
