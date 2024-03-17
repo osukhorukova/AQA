@@ -16,12 +16,12 @@ public class XpathLocatorsTest {
     public void setup() throws InterruptedException {
         driver = new BrowserService().getDriver();
         driver.get(ReadProperties.getUrl());
-        //by xpath - Username input
-        driver.findElement(By.cssSelector("#user-name")).sendKeys(ReadProperties.username());
-        //by css #id - Password input
-        driver.findElement(By.cssSelector("#password")).sendKeys(ReadProperties.password());
-        //by css .class1.class2 - Clicking "Login" button
-        driver.findElement(By.cssSelector(".submit-button.btn_action")).click();
+        //by xpath (“//tag[@attribute=‘value’]“) - Username input
+        driver.findElement(By.xpath("//*[@id='user-name']")).sendKeys(ReadProperties.username());
+        //by xpath (“//tag[@attribute=‘value’]“)  - Password input
+        driver.findElement(By.xpath("//*[@id='password']")).sendKeys(ReadProperties.password());
+        //by xpath (“//tag[@attribute=‘value’]“)   - Clicking "Login" button
+        driver.findElement(By.xpath("//*[@class='submit-button btn_action']")).click();
     }
 
     @AfterTest
@@ -29,31 +29,37 @@ public class XpathLocatorsTest {
         driver.quit();
     }
 
-    @Test(testName = "Adding items to cart using CSS locators")
-    public void locatorsCssTest_1() throws InterruptedException {
+    @Test(testName = "Adding items to cart using XPath")
+    public void locatorsXpathTest_1() throws InterruptedException {
 
-        //by css tagName - sorting the list by name (Z to A)
-        WebElement sorting = driver.findElement(By.cssSelector("select"));
+        //by XPath (“//tag[contains(@attribute,‘text’)]“) - sorting the list by name (Z to A)
+        WebElement sorting = driver.findElement(By.xpath("//select[contains(@class,'sort')]"));
         sorting.click();
         Select selectSort = new Select(sorting);
         selectSort.selectByValue("za");
-        //by .class - opening the hamburger menu
-        driver.findElement(By.cssSelector(".bm-burger-button")).click();
-        //by tagName.class - closing the hamburger menu
-        driver.findElement(By.cssSelector("div.bm-cross-button")).click();
-        //by [attribute=value] - adding "Sauce Labs Backpack" to cart
-        driver.findElement(By.cssSelector("[data-test='add-to-cart-sauce-labs-backpack']")).click();
-        //by .class1 .class2 - opening cart
-        driver.findElement(By.cssSelector(".primary_header .shopping_cart_container")).click();
-        //by [attribute$=value] - checking the items counter on the cart navbar icon
-        Assert.assertEquals(driver.findElement(By.cssSelector("[class$='badge']")).getText(), "1");
-        //by [attribute|=value] - going back to shopping
-        driver.findElement(By.cssSelector("[name|='continue']")).click();
-        //by [attribute^=value] - checking the presence of twitter link
-        Assert.assertTrue(driver.findElement(By.cssSelector("[href^='https://twitter']")).isDisplayed());
-        //by [] - checking the presence of facebook link
-        Assert.assertTrue(driver.findElement(By.cssSelector("[class~='social_facebook']")).isDisplayed());
-        //by [attribute*=value] - checking the presence of linkedin link
-        Assert.assertTrue(driver.findElement(By.cssSelector("[href*='linkedin']")).isDisplayed());
+        //by Xpath (“//tag[text()=‘text’]“) - opening "Sauce Labs Onesie", adding it to cart and going back
+        driver.findElement(By.xpath("//*[text()='Sauce Labs Onesie']")).click();
+        driver.findElement(By.xpath("//*[text()='Add to cart']")).click();
+        driver.findElement(By.xpath("//*[text()='Back to products']")).click();
+        //by Xpath (“//tag[contains(text(),‘text’)]“) - opening "Sauce Labs Bike Light", adding it to cart and going back
+        driver.findElement(By.xpath("//*[contains(text(), 'Lig')]")).click();
+        driver.findElement(By.xpath("//*[contains(text(), 'to cart')]")).click();
+        driver.findElement(By.xpath("//*[contains(text(), 'Back to')]")).click();
+        //by XPath parent - opening cart
+        driver.findElement(By.xpath("//a/parent::div")).click();
+        //by Xpath child - checking the items counter on the cart navbar icon
+        Assert.assertEquals(driver.findElement(By.xpath("//a/child::span")).getText(), "2");
+        //by Xpath (“//tag[contains(text(),‘text’)]“) - pressing Checkout button
+        driver.findElement(By.xpath("//*[contains(text(), 'Check')]")).click();
+        //by Xpath (“//tag[contains(@attribute,‘text’)]“)  - pressing Continue without filling in the form
+        driver.findElement(By.xpath("//*[@id='continue']")).click();
+        //by Xpath ancestor - checking that the error message appeared
+        Assert.assertTrue(driver.findElement(By.xpath("//button/ancestor::h3")).isDisplayed());
+        //by Xpath descendant - closing the error message
+        driver.findElement(By.xpath("//div[@class='error-message-container error']//descendant::button")).click();
+        //by XPath following - checking the presence of linkedin link
+        Assert.assertTrue(driver.findElement(By.xpath("//li[@class='social_facebook']/following::a")).isDisplayed());
+        //by XPath preceding - checking the presence of twitter link
+        Assert.assertTrue(driver.findElement(By.xpath("//li[@class='social_facebook']/preceding::li")).isDisplayed());
     }
 }
