@@ -1,3 +1,4 @@
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -16,7 +17,8 @@ public class ContextMenuTest extends BaseTest {
                 .contextClick()
                 .build()
                 .perform();
-        WebElement alertMessage = waitsService.waitForVisibilityLocatedBy(By.xpath("//*[@id='content']/script"));
-        Assert.assertEquals(alertMessage.getText(),"You selected a context menu");
+        Alert alert = driver.switchTo().alert();
+        Assert.assertEquals(alert.getText(),"You selected a context menu");
+        alert.accept();
     }
 }
