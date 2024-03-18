@@ -1,3 +1,5 @@
+package baseEntities;
+
 import core.BrowserService;
 import core.WaitsService;
 import org.openqa.selenium.WebDriver;
