@@ -32,7 +32,6 @@ public class DashboardPage extends BasePage {
         return pagePath;
     }
 
-
     // Блок атомарных методов
     public WebElement getHeaderTitleLabel() {
         return driver.findElement(headerTitleLabelLocator);
