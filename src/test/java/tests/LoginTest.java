@@ -4,6 +4,7 @@ import baseEntities.BaseTest;
 import com.fasterxml.jackson.databind.ser.Serializers;
 import configuration.ReadProperties;
 import org.testng.annotations.Test;
+import pages.DashboardPage;
 import pages.LoginPage;
 
 public class LoginTest extends BaseTest {
@@ -13,5 +14,7 @@ public class LoginTest extends BaseTest {
         loginPage.getEmailInput().sendKeys(ReadProperties.username());
         loginPage.getPasswordInput().sendKeys(ReadProperties.password());
         loginPage.clickLoginButton();
+
+        DashboardPage dashboardPage = new DashboardPage();
     }
 }

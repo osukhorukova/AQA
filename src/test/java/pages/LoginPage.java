@@ -12,15 +12,15 @@ public class LoginPage extends BasePage {
     private final By passwordInputLocator = By.id("password");
     private final By loginButtonLocator = By.id("button_primary");
 
+
+    // Блок инициализации класса
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }
 
-    // Блок инициализации класса
-
-
     // Блок атомарных методов
-    public WebElement getEmailInput(){
+    public WebElement getEmailInput() {
         return driver.findElement(emailInputLocator);
     }
 
@@ -28,11 +28,11 @@ public class LoginPage extends BasePage {
         return driver.findElement(passwordInputLocator);
     }
 
-    public WebElement getLoginButton(){
+    public WebElement getLoginButton() {
         return driver.findElement(loginButtonLocator);
     }
 
-    public void clickLoginButton(){
+    public void clickLoginButton() {
         getLoginButton().click();
     }
 }
