@@ -1,14 +1,10 @@
 package core;
 
 import configuration.ReadProperties;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.*;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -62,13 +58,5 @@ public class WaitsService {
                 .pollingEvery(Duration.ofMillis(50))
                 .ignoring(NoSuchElementException.class);
         return fluent.until(driver -> driver.findElement(by));
-    }
-
-    public Boolean fluentWaitForInvisibility(By by) {
-        FluentWait<WebDriver> fluent = new FluentWait<>(driver)
-                .withTimeout(timeout)
-                .pollingEvery(Duration.ofMillis(50))
-                .ignoring(NoSuchElementException.class);
-        return (Boolean) fluent.until(driver -> driver.findElements(by).size() == 0 ? true : new RuntimeException());
     }
 }

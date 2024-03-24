@@ -4,17 +4,16 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.Objects;
+
 public class FileUploadTest extends BaseTest {
     @Test
     public void fileUploadTest() {
         driver.get("https://the-internet.herokuapp.com/upload");
-
-        WebElement checkBox = driver.findElement(By.xpath("//*[@id='checkbox']"));
-        WebElement button = waitsService.waitForElementClickable(By.cssSelector("#checkbox-example > button"));
-        button.click();
-        WebElement goneText = waitsService.waitForVisibilityLocatedBy(By.xpath("//*[@id='message']"));
-        Assert.assertEquals(waitsService.waitForElementVisible(goneText), goneText);
-        Assert.assertTrue(waitsService.waitForElementInvisible(checkBox));
-
+        WebElement fileUploadButton = waitsService.waitForVisibilityLocatedBy(By.id("file-upload"));
+        String path = Objects.requireNonNull(FileUploadTest.class.getClassLoader().getResource("Coffee_OpenGraph.png")).getPath();
+        fileUploadButton.sendKeys(path);
+        waitsService.waitForElementVisible(fileUploadButton).submit();
+        Assert.assertEquals(waitsService.waitForElementClickable(By.id("uploaded-files")).getText(), "Coffee_OpenGraph.png");
     }
 }
