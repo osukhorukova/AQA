@@ -1,5 +1,4 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -26,6 +25,6 @@ public class WindowsTest extends BaseTest {
         Assert.assertEquals(waitsService.waitForVisibilityLocatedBy(By.tagName("h3")).getText(), "New Window");
         driver.close();
         driver.switchTo().window(originalWindowHandle);
-        Assert.assertEquals(driver.getWindowHandles().size(),2);
+        Assert.assertEquals(driver.getWindowHandles().size(), 2);
     }
 }
