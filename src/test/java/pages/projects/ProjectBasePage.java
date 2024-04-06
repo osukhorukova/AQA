@@ -1,54 +1,42 @@
-package pages;
+package pages.projects;
 
 import baseEntities.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import pages.TopMenuPage;
 
-public class AddProjectPage extends BasePage {
-    private final static String pagePath = "/index.php?/admin/projects/add/1";
+public abstract class ProjectBasePage extends BasePage {
+    public TopMenuPage topMenuPage;
 
     //Блок описания локаторов
     private final By nameInputLocator = By.id("name");
     private final By announcementTestAreaLocator = By.id("announcement_display");
     private final By showAnnouncementCheckboxLocator = By.id("show_announcement");
     private final By suiteModeSingleTypeLocator = By.id("suite_mode_single");
-    public TopMenuPage topMenuPage;
 
-    public AddProjectPage(WebDriver driver) {
+    public ProjectBasePage(WebDriver driver) {
         this(driver, false);
     }
 
-    public AddProjectPage(WebDriver driver, boolean openPageUrl) {
+    public ProjectBasePage(WebDriver driver, boolean openPageUrl) {
         super(driver, openPageUrl);
         topMenuPage = new TopMenuPage(driver);
     }
 
-    @Override
-    protected By getPageIdentifier() {
-        return null;
-    }
-
-    @Override
-    protected String getPagePath() {
-        return pagePath;
-    }
-
-
-    // Блок атомарных методов
     public WebElement getNameInput() {
-        return driver.findElement(nameInputLocator);
+        return waitsService.waitForVisibilityLocatedBy(nameInputLocator);
     }
 
     public WebElement getAnnouncementTestArea() {
-        return driver.findElement(announcementTestAreaLocator);
+        return waitsService.waitForVisibilityLocatedBy(announcementTestAreaLocator);
     }
 
     public WebElement getShowAnnouncementCheckbox() {
-        return driver.findElement(showAnnouncementCheckboxLocator);
+        return waitsService.waitForVisibilityLocatedBy(showAnnouncementCheckboxLocator);
     }
 
     public WebElement getSuiteModeSingleType() {
-        return driver.findElement(suiteModeSingleTypeLocator);
+        return waitsService.waitForVisibilityLocatedBy(suiteModeSingleTypeLocator);
     }
 }

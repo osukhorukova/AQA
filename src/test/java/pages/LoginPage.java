@@ -1,8 +1,6 @@
 package pages;
 
 import baseEntities.BasePage;
-import com.fasterxml.jackson.databind.ser.Serializers;
-import configuration.ReadProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,14 +11,16 @@ public class LoginPage extends BasePage {
     private final By emailInputLocator = By.id("name");
     private final By passwordInputLocator = By.id("password");
     private final By loginButtonLocator = By.id("button_primary");
+    private final By errorTextLabelLocator = By.className("error-text");
 
 
     // Блок инициализации класса
     public LoginPage(WebDriver driver) {
         super(driver);
     }
+
     @Override
-    protected By getPageIdentifier(){
+    protected By getPageIdentifier() {
         return emailInputLocator;
     }
 
@@ -41,14 +41,14 @@ public class LoginPage extends BasePage {
     public WebElement getLoginButton() {
         return waitsService.waitForVisibilityLocatedBy(loginButtonLocator);
     }
+    public WebElement getErrorTextLabel() {
+        return waitsService.waitForVisibilityLocatedBy(errorTextLabelLocator);
+    }
 
     public void clickLoginButton() {
         getLoginButton().click();
     }
-
-    public void login(String username, String password){
-        getEmailInput().sendKeys(username);
-        getPasswordInput().sendKeys(password);
-        clickLoginButton();
+    public String getErrorText(){
+        return getErrorTextLabel().getText();
     }
 }
