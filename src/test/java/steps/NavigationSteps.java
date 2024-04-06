@@ -1,24 +1,32 @@
 package steps;
 
 import org.openqa.selenium.WebDriver;
-import pages.DashboardPage;
+import org.openqa.selenium.support.ui.Select;
+import pages.ProductsPage;
 import pages.LoginPage;
 import baseEntities.BaseSteps;
 
-public class NavigationSteps extends BaseSteps{
+public class NavigationSteps extends BaseSteps {
     private LoginPage loginPage;
-    private DashboardPage dashboardPage;
+    private ProductsPage productsPage;
+
     public NavigationSteps(WebDriver driver) {
         super(driver);
     }
 
     public void login(String username, String password) {
         loginPage = new LoginPage(driver);
-        loginPage.getEmailInput().sendKeys(username);
+        loginPage.getUsernameInput().sendKeys(username);
         loginPage.getPasswordInput().sendKeys(password);
         loginPage.clickLoginButton();
     }
-    public void navigateToDashboardByUrl(){
-        dashboardPage = new DashboardPage(driver,true);
+
+    public void navigateToProductPageByUrl() {
+        productsPage = new ProductsPage(driver, true);
+    }
+
+    public void navigateToCart() {
+        ProductsPage productsPage = new ProductsPage(driver);
+        productsPage.getCartButton().click();
     }
 }

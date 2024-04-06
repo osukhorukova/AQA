@@ -26,7 +26,8 @@ public class BrowserService {
                 break;
         }
     }
-    public WebDriver getDriver(){
+
+    public WebDriver getDriver() {
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(ReadProperties.timeout()));
@@ -42,6 +43,4 @@ public class BrowserService {
         //chromeOptions.addArguments("--headless");
         return chromeOptions;
     }
-
-
 }

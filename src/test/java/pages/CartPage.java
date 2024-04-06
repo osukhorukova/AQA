@@ -5,19 +5,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class TopMenuPage extends BasePage {
-    private final static String pagePath = "";
+public class CartPage extends BasePage {
+    private final static String pagePath = "/cart.html";
 
     // Блок описания локаторов для элементов
-    private final By topPanelLocator = By.className("top-panel");
+    private final By checkoutButtonLocator = By.id("checkout");
 
     // Блок инициализации класса
-    public TopMenuPage(WebDriver driver) {
+    public CartPage(WebDriver driver) {
         super(driver);
     }
+
     @Override
-    protected By getPageIdentifier(){
-        return topPanelLocator;
+    protected By getPageIdentifier() {
+        return checkoutButtonLocator;
     }
 
     @Override
@@ -25,13 +26,9 @@ public class TopMenuPage extends BasePage {
         return pagePath;
     }
 
-    @Override
-    public void openPageByUrl(){
-    }
-
     // Блок атомарных методов
 
-    public WebElement getTopPanel() {
-        return driver.findElement(topPanelLocator);
+    public WebElement getCheckoutButton() {
+        return driver.findElement(checkoutButtonLocator);
     }
 }

@@ -8,11 +8,9 @@ import org.openqa.selenium.WebElement;
 public class LoginPage extends BasePage {
     private final static String pagePath = "";
     // Блок описания локаторов для элементов
-    private final By emailInputLocator = By.id("name");
+    private final By usernameInputLocator = By.id("user-name");
     private final By passwordInputLocator = By.id("password");
-    private final By loginButtonLocator = By.id("button_primary");
-    private final By errorTextLabelLocator = By.className("error-text");
-
+    private final By loginButtonLocator = By.id("login-button");
 
     // Блок инициализации класса
     public LoginPage(WebDriver driver) {
@@ -21,7 +19,7 @@ public class LoginPage extends BasePage {
 
     @Override
     protected By getPageIdentifier() {
-        return emailInputLocator;
+        return usernameInputLocator;
     }
 
     @Override
@@ -30,8 +28,8 @@ public class LoginPage extends BasePage {
     }
 
     // Блок атомарных методов
-    public WebElement getEmailInput() {
-        return waitsService.waitForVisibilityLocatedBy(emailInputLocator);
+    public WebElement getUsernameInput() {
+        return waitsService.waitForVisibilityLocatedBy(usernameInputLocator);
     }
 
     public WebElement getPasswordInput() {
@@ -41,14 +39,8 @@ public class LoginPage extends BasePage {
     public WebElement getLoginButton() {
         return waitsService.waitForVisibilityLocatedBy(loginButtonLocator);
     }
-    public WebElement getErrorTextLabel() {
-        return waitsService.waitForVisibilityLocatedBy(errorTextLabelLocator);
-    }
 
     public void clickLoginButton() {
         getLoginButton().click();
-    }
-    public String getErrorText(){
-        return getErrorTextLabel().getText();
     }
 }
