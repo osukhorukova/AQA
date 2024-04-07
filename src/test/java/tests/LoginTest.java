@@ -17,7 +17,7 @@ import steps.NavigationSteps;
 public class LoginTest extends BaseTest {
 
     @Test
-    public void successfulLoginTest2() {
+    public void successfulLoginTest2() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
 
         Assert.assertTrue(loginPage.successfulLogin(ReadProperties.username(), ReadProperties.password())
@@ -26,7 +26,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void wrongPasswordTest2() {
+    public void wrongPasswordTest2() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
 
         Assert.assertEquals(loginPage.incorrectLogin("fefefefdfd", ReadProperties.password())

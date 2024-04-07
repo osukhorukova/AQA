@@ -10,7 +10,7 @@ import steps.NavigationSteps;
 
 public class LoginStepsTest extends BaseTest {
     @Test
-    public void successfulLoginTest() {
+    public void successfulLoginTest() throws InterruptedException {
         NavigationSteps navigationSteps = new NavigationSteps(driver);
 
         Assert.assertTrue(
@@ -20,7 +20,7 @@ public class LoginStepsTest extends BaseTest {
     }
 
     @Test
-    public void incorrectLoginTest() {
+    public void incorrectLoginTest() throws InterruptedException {
         NavigationSteps navigationSteps = new NavigationSteps(driver);
 
         Assert.assertEquals(

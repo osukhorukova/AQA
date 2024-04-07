@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 public class DashboardPage extends BasePage {
     private final static String pagePath = "/index.php?/dashboard";
     // Блок описания локаторов для элементов
-    private final By headerTitleLabelLocator =
+    private static final By headerTitleLabelLocator =
             By.xpath("//div[contains(@class, 'content-header-title') and contains(text(),' Projects')]");
     public TopMenuPage topMenuPage;
 
@@ -16,7 +16,7 @@ public class DashboardPage extends BasePage {
     public DashboardPage(WebDriver driver) {
         this(driver,false);
     }
-    public DashboardPage(WebDriver driver, boolean openPageByUrl) {
+    public DashboardPage(WebDriver driver, boolean openPageByUrl){
         super(driver, openPageByUrl);
         topMenuPage = new TopMenuPage(driver);
         openPageByUrl();
