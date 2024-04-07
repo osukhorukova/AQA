@@ -38,11 +38,30 @@ public class LoginTest extends BaseTest {
 //    }
 
     @Test
-    public void wrongPasswordTest() {
-        NavigationSteps navigationSteps = new NavigationSteps(driver);
-        navigationSteps.login(ReadProperties.username(),"fkdfjkowdf");
-
+    public void successfulLoginTest2() {
         LoginPage loginPage = new LoginPage(driver);
-        Assert.assertEquals(loginPage.getErrorText(),"Email/Login or Password is incorrect. Please try again.");
+
+        Assert.assertTrue(loginPage.successfulLogin(ReadProperties.username(),ReadProperties.password())
+                .isPageOpened()
+        );
     }
+
+//    @Test
+//    public void wrongPasswordTest() {
+//        NavigationSteps navigationSteps = new NavigationSteps(driver);
+//        navigationSteps.login(ReadProperties.username(),"fkdfjkowdf");
+//
+//        LoginPage loginPage = new LoginPage(driver);
+//        Assert.assertEquals(loginPage.getErrorText(),"Email/Login or Password is incorrect. Please try again.");
+//    }
+
+    @Test
+    public void wrongPasswordTest2() {
+        LoginPage loginPage = new LoginPage(driver);
+
+        Assert.assertEquals(loginPage.incorrectLogin("fefefefdfd",ReadProperties.password())
+                .getErrorText(),"Email/Login or Password is incorrect. Please try again."
+        );
+    }
+
 }

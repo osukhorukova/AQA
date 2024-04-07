@@ -34,10 +34,17 @@ public class LoginPage extends BasePage {
         return waitsService.waitForVisibilityLocatedBy(emailInputLocator);
     }
 
+    public LoginPage setEmail(String value){
+        getEmailInput().sendKeys(value);
+        return this; // возвращаем эту же страницу
+    }
     public WebElement getPasswordInput() {
         return waitsService.waitForVisibilityLocatedBy(passwordInputLocator);
     }
-
+    public LoginPage setPassword(String value){
+        getPasswordInput().sendKeys(value);
+        return this; // возвращаем эту же страницу
+    }
     public WebElement getLoginButton() {
         return waitsService.waitForVisibilityLocatedBy(loginButtonLocator);
     }
@@ -50,5 +57,20 @@ public class LoginPage extends BasePage {
     }
     public String getErrorText(){
         return getErrorTextLabel().getText();
+    }
+    private void login(String username, String password){
+        this
+                .setEmail(username)
+                .setPassword(password)
+                .clickLoginButton();
+    }
+
+    public DashboardPage successfulLogin(String username, String password){
+        login(username,password);
+        return new DashboardPage(driver);
+    }
+    public LoginPage incorrectLogin(String username, String password){
+        login(username,password);
+        return this;
     }
 }
