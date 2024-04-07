@@ -12,11 +12,13 @@ public class NavigationSteps extends BaseSteps{
         super(driver);
     }
 
-    public void login(String username, String password) {
+    public DashboardPage successfulLogin(String username, String password) {
         loginPage = new LoginPage(driver);
-        loginPage.getEmailInput().sendKeys(username);
-        loginPage.getPasswordInput().sendKeys(password);
-        loginPage.clickLoginButton();
+        return loginPage.successfulLogin(username,password);
+    }
+    public LoginPage incorrectLogin(String username, String password) {
+        loginPage = new LoginPage(driver);
+        return loginPage.incorrectLogin(username,password);
     }
     public void navigateToDashboardByUrl(){
         dashboardPage = new DashboardPage(driver,true);

@@ -15,53 +15,22 @@ import pages.projects.ProjectBasePage;
 import steps.NavigationSteps;
 
 public class LoginTest extends BaseTest {
-    @Test
-    public void successfulLoginTest() {
-        NavigationSteps navigationSteps = new NavigationSteps(driver);
-        navigationSteps.login(ReadProperties.username(), ReadProperties.password());
-
-        Assert.assertTrue(new DashboardPage(driver).isPageOpened());
-    }
-
-//    @Test
-//    public void successfulLoginTest1() {
-//        NavigationSteps navigationSteps = new NavigationSteps(driver);
-//        navigationSteps.login(ReadProperties.username(),ReadProperties.password());
-//
-//        driver.get("https://aqa2504.testrail.io/index.php?/projects/overview/29");
-//        DashboardPage dashboardPage = new DashboardPage(driver, true);
-//
-//        Assert.assertTrue(dashboardPage.isPageOpened());
-//
-//        AddProjectPage addProjectPage = new AddProjectPage(driver, true);
-//        addProjectPage.getNameInput().sendKeys("gfdgfds");
-//    }
 
     @Test
     public void successfulLoginTest2() {
         LoginPage loginPage = new LoginPage(driver);
 
-        Assert.assertTrue(loginPage.successfulLogin(ReadProperties.username(),ReadProperties.password())
+        Assert.assertTrue(loginPage.successfulLogin(ReadProperties.username(), ReadProperties.password())
                 .isPageOpened()
         );
     }
-
-//    @Test
-//    public void wrongPasswordTest() {
-//        NavigationSteps navigationSteps = new NavigationSteps(driver);
-//        navigationSteps.login(ReadProperties.username(),"fkdfjkowdf");
-//
-//        LoginPage loginPage = new LoginPage(driver);
-//        Assert.assertEquals(loginPage.getErrorText(),"Email/Login or Password is incorrect. Please try again.");
-//    }
 
     @Test
     public void wrongPasswordTest2() {
         LoginPage loginPage = new LoginPage(driver);
 
-        Assert.assertEquals(loginPage.incorrectLogin("fefefefdfd",ReadProperties.password())
-                .getErrorText(),"Email/Login or Password is incorrect. Please try again."
+        Assert.assertEquals(loginPage.incorrectLogin("fefefefdfd", ReadProperties.password())
+                .getErrorText(), "Email/Login or Password is incorrect. Please try again."
         );
     }
-
 }
