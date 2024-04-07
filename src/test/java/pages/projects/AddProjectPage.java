@@ -1,6 +1,7 @@
 package pages.projects;
 
 import baseEntities.BasePage;
+import com.github.dockerjava.core.dockerfile.DockerfileStatement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -36,5 +37,25 @@ public class AddProjectPage extends ProjectBasePage {
     public WebElement getAddProjectButton() {
         return waitsService.waitForVisibilityLocatedBy(addProjectButtonLocator);
     }
-
+    public AddProjectPage setName(String value){
+        return this;
+    }
+    public AddProjectPage setAnnouncement(String value){
+        return this;
+    }
+    public AddProjectPage setShowAnnouncement(){
+        return this;
+    }
+    public AddProjectPage removeShowAnnouncement(){
+        return this;
+    }
+    public AddProjectPage setProjectType(int value){
+        return this;
+    }
+    public AddProjectPage setEnableTCApproval(){
+        return this;
+    }
+    public AddProjectPage removeEnableTCApproval(){
+        return this;
+    }
 }
