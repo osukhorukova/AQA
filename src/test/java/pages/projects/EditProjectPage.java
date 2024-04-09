@@ -2,6 +2,7 @@ package pages.projects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import pages.TopMenuPage;
 
 public class EditProjectPage extends ProjectBasePage {
@@ -16,7 +17,7 @@ public class EditProjectPage extends ProjectBasePage {
     }
 
     @Override
-    protected By getPageIdentifier() {
+    protected WebElement getPageIdentifier() {
         return null;
     }
 

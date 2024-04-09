@@ -21,8 +21,8 @@ public class AddProjectPage extends ProjectBasePage {
     }
 
     @Override
-    protected By getPageIdentifier() {
-        return null;
+    protected WebElement getPageIdentifier() {
+        return driver.findElement(addProjectButtonLocator);
     }
 
     @Override
@@ -30,11 +30,9 @@ public class AddProjectPage extends ProjectBasePage {
         return pagePath;
     }
 
-
     // Блок атомарных методов
 
     public WebElement getAddProjectButton() {
         return waitsService.waitForVisibilityLocatedBy(addProjectButtonLocator);
     }
-
 }

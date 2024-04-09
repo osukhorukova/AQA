@@ -4,14 +4,19 @@ import baseEntities.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
     private final static String pagePath = "";
     // Блок описания локаторов для элементов
-    private final By emailInputLocator = By.id("name");
-    private final By passwordInputLocator = By.id("password");
-    private final By loginButtonLocator = By.id("button_primary");
-    private final By errorTextLabelLocator = By.className("error-text");
+    @FindBy(id="name")
+    public WebElement emailInput;
+    @FindBy(id="password")
+    public WebElement passwordInput;
+    @FindBy(id="button_primary")
+    public WebElement loginButton;
+    @FindBy(className = "error-text")
+    public WebElement errorTextLabel;
 
 
     // Блок инициализации класса
@@ -20,8 +25,8 @@ public class LoginPage extends BasePage {
     }
 
     @Override
-    protected By getPageIdentifier() {
-        return emailInputLocator;
+    protected WebElement getPageIdentifier() {
+        return emailInput;
     }
 
     @Override
@@ -30,33 +35,19 @@ public class LoginPage extends BasePage {
     }
 
     // Блок атомарных методов
-    public WebElement getEmailInput() {
-        return waitsService.waitForVisibilityLocatedBy(emailInputLocator);
-    }
-
     public LoginPage setEmail(String value){
-        getEmailInput().sendKeys(value);
+        emailInput.sendKeys(value);
         return this; // возвращаем эту же страницу
-    }
-    public WebElement getPasswordInput() {
-        return waitsService.waitForVisibilityLocatedBy(passwordInputLocator);
     }
     public LoginPage setPassword(String value){
-        getPasswordInput().sendKeys(value);
+        passwordInput.sendKeys(value);
         return this; // возвращаем эту же страницу
     }
-    public WebElement getLoginButton() {
-        return waitsService.waitForVisibilityLocatedBy(loginButtonLocator);
-    }
-    public WebElement getErrorTextLabel() {
-        return waitsService.waitForVisibilityLocatedBy(errorTextLabelLocator);
-    }
-
     public void clickLoginButton() {
-        getLoginButton().click();
+        loginButton.click();
     }
     public String getErrorText(){
-        return getErrorTextLabel().getText();
+        return errorTextLabel.getText();
     }
     private void login(String username, String password){
         this

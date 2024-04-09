@@ -16,8 +16,8 @@ public class TopMenuPage extends BasePage {
         super(driver);
     }
     @Override
-    protected By getPageIdentifier(){
-        return topPanelLocator;
+    protected WebElement getPageIdentifier(){
+        return driver.findElement(topPanelLocator);
     }
 
     @Override
