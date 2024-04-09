@@ -24,9 +24,10 @@ public class LoginStepsTest extends BaseTest {
     @Test
     public void successfulLoginTest1() {
         NavigationSteps navigationSteps = new NavigationSteps(driver);
-        User admin = new User();
-        admin.setEmail(ReadProperties.username());
-        admin.setPassword(ReadProperties.password());
+        User admin = new User.Builder()
+                .withEmail(ReadProperties.username())
+                .withPassword(ReadProperties.password())
+                .build();
 
         Project expectedProject = new Project();
         expectedProject.setName("project1");
