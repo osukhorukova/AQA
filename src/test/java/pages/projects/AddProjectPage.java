@@ -21,7 +21,7 @@ public class AddProjectPage extends ProjectBasePage {
     }
 
     @Override
-    protected By getPageIdentifier() {
+    protected WebElement getPageIdentifier() {
         return null;
     }
 
@@ -36,5 +36,4 @@ public class AddProjectPage extends ProjectBasePage {
     public WebElement getAddProjectButton() {
         return waitsService.waitForVisibilityLocatedBy(addProjectButtonLocator);
     }
-
 }

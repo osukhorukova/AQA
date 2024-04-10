@@ -4,6 +4,7 @@ import configuration.ReadProperties;
 import core.WaitsService;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Wait;
 
 public abstract class BasePage {
@@ -23,12 +24,12 @@ public abstract class BasePage {
         }
     }
 
-    protected abstract By getPageIdentifier();
+    protected abstract WebElement getPageIdentifier();
 
     protected abstract String getPagePath();
 
     public boolean isPageOpened() {
-        return driver.findElement(getPageIdentifier()).isDisplayed();
+        return getPageIdentifier().isDisplayed();
     }
 
     public void openPageByUrl() {

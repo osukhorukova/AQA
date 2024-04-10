@@ -41,7 +41,8 @@ public class BaseTest {
         testMilestone = new Milestone.Builder()
                 .withName("Test Milestone")
                 .withReference("WEB-025")
-                .isMilestoneCompleted(false)
+                .withDescription("This is an empty milestone for my \"patterns\" homework :)")
+                .isCompleted(false)
                 .build();
     }
 

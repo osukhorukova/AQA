@@ -46,7 +46,7 @@ public class Milestone {
             return this;
         }
 
-        public Builder isMilestoneCompleted(Boolean isCompleted) {
+        public Builder isCompleted(Boolean isCompleted) {
             newMilestone.isCompleted = isCompleted;
             return this;
         }
