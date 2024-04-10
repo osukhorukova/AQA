@@ -3,6 +3,7 @@ package baseEntities;
 import configuration.ReadProperties;
 import core.BrowserService;
 import core.WaitsService;
+import models.Milestone;
 import models.Project;
 import models.User;
 import org.openqa.selenium.WebDriver;
@@ -17,6 +18,7 @@ public class BaseTest {
     protected WaitsService waitsService;
     protected User admin;
     protected Project mainProject;
+    protected Milestone testMilestone;
 
     @BeforeTest
     public void setUpUser() {
@@ -37,8 +39,8 @@ public class BaseTest {
     @BeforeTest
     public void setUpMilestone() {
         testMilestone = new Milestone.Builder()
-                .withName("Dummy project Milestone")
-                .withReference("QA-123")
+                .withName("Test Milestone")
+                .withReference("WEB-025")
                 .isMilestoneCompleted(false)
                 .build();
     }
